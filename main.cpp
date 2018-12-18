@@ -4,6 +4,7 @@
 #include "src/reverse_int.h"
 #include "src/longest_common_prefix.h"
 #include "src/s2_contain_s1.h"
+#include "src/two_string_multip.h"
 
 using namespace std;
 
@@ -35,9 +36,13 @@ int main(int argc, char *argv[])
 
 //  cout << longestCommonPrefix(test3) << endl;
 
-  string test4 = "abb";
-  vector<string> ans;
-  createPermutation(test4, ans);
+//  string test4 = "abb";
+//  vector<string> ans;
+//  createPermutation(test4, ans);
+
+  string test5 = "123";
+  string test6 = "456";
+  cout << multiply(test5, test6) << endl;
 
   system("pause");
 
