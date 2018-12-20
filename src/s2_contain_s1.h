@@ -42,7 +42,6 @@ bool isSwapable(string s1, int start, int end) {
 void createAllRange(string s1, int start, vector<string> &ans) {
   if (start == s1.size() - 1) {
     ans.push_back(s1);
-    cout << s1 << endl;
   }
 
   for (int i = start; i < s1.size(); ++i) {
@@ -57,7 +56,6 @@ void createAllRange(string s1, int start, vector<string> &ans) {
 void createAllRangeWithoutRepeat(string s1, int start, vector<string> &ans) {
   if (start == s1.size() - 1) {
     ans.push_back(s1);
-    cout << s1 << endl;
   }
 
   for (int i = start; i < s1.size(); ++i) {
@@ -79,11 +77,44 @@ void createPermutation(string s1, vector<string> &ans) {
   createAllRangeWithoutRepeat(s1, 0, ans);
 }
 
-bool checkInclusion(string s1, string s2) {
+bool checkInclusion_ugly(string s1, string s2) {
 
   if (s1.empty() || s2.empty()) {
     return false;
   }
+
+  if (s1.size() > s2.size()) {
+    return false;
+  }
+
+  vector<string> permutation;
+  createPermutation(s1, permutation);
+  for (int i = 0; i < permutation.size(); ++i) {
+    if (s2.find(permutation[i]) != string::npos) {
+      return true;
+    }
+  }
+  return false;
+}
+
+bool checkInclusion(string s1, string s2) {
+  if (s1.empty() || s2.empty() || s1.size() > s2.size()) {
+    return false;
+  }
+  vector<int> hash_s1(26, 0), hash_s2(26, 0);
+  int size_1 = s1.size();
+  int size_2 = s2.size();
+  for (int i = 0; i < size_1; ++i) {
+    ++hash_s1[s1[i] - 'a'];
+    ++hash_s2[s2[i] - 'a'];
+  }
+  if (hash_s1 == hash_s2) return true;
+  for (int j = size_1; j < size_2; ++j) {
+    --hash_s2[s2[j - size_1] - 'a'];
+    ++hash_s2[s2[j] - 'a'];
+    if (hash_s1 == hash_s2) return true;
+  }
+  return false;
 }
 
 #endif // S2_CONTAIN_S1_H

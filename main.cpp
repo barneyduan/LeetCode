@@ -40,9 +40,13 @@ int main(int argc, char *argv[])
 //  vector<string> ans;
 //  createPermutation(test4, ans);
 
-  string test5 = "123";
-  string test6 = "456";
-  cout << multiply(test5, test6) << endl;
+//  string test5 = "123";
+//  string test6 = "456";
+//  cout << multiply(test5, test6) << endl;
+
+  string s1 = "ab";
+  string s2 = "eibaooo";
+  cout << checkInclusion(s1, s2) << endl;
 
   system("pause");
 
