@@ -6,5 +6,6 @@ HEADERS += \
     $$PWD/src/reverse_int.h \
     $$PWD/src/longest_common_prefix.h \
     $$PWD/src/s2_contain_s1.h \
-    $$PWD/src/two_string_multip.h
+    $$PWD/src/two_string_multip.h \
+    $$PWD/src/reverse_string.h
 

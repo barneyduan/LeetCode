@@ -5,6 +5,7 @@
 #include "src/longest_common_prefix.h"
 #include "src/s2_contain_s1.h"
 #include "src/two_string_multip.h"
+#include "src/reverse_string.h"
 
 using namespace std;
 
@@ -44,9 +45,20 @@ int main(int argc, char *argv[])
 //  string test6 = "456";
 //  cout << multiply(test5, test6) << endl;
 
-  string s1 = "ab";
-  string s2 = "eibaooo";
-  cout << checkInclusion(s1, s2) << endl;
+//  string s1 = "ab";
+//  string s2 = "eibaooo";
+//  cout << checkInclusion(s1, s2) << endl;
+
+  string s1 = "the sky is blue";
+  reverseWords(s1);
+
+  string s2 = "a";
+  reverseWords(s2);
+
+  string s3 = "1 ";
+  reverseWords(s3);
+
+  cout << s3 << endl;
 
   system("pause");
 
