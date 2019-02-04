@@ -6,6 +6,7 @@
 #include "src/s2_contain_s1.h"
 #include "src/two_string_multip.h"
 #include "src/reverse_string.h"
+#include "src/restore_ip_address.h"
 
 using namespace std;
 
@@ -49,16 +50,24 @@ int main(int argc, char *argv[])
 //  string s2 = "eibaooo";
 //  cout << checkInclusion(s1, s2) << endl;
 
-  string s1 = "the sky is blue";
-  reverseWords(s1);
+//  string s1 = "the sky is blue";
+//  reverseWords(s1);
 
-  string s2 = "a";
-  reverseWords(s2);
+//  string s2 = "a";
+//  reverseWords(s2);
 
-  string s3 = "1 ";
-  reverseWords(s3);
+//  string s3 = "1 ";
+//  reverseWords(s3);
 
-  cout << s3 << endl;
+//  cout << s3 << endl;
+
+  string s1 = "111111111111111";
+  vector<string> r1 = restoreIpAddresses(s1);
+
+  for (int i = 0; i < r1.size(); ++i) {
+    cout << r1[i] << '\t';
+  }
+  cout << endl;
 
   system("pause");
 

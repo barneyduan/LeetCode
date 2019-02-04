@@ -2,3 +2,5 @@
 Makefile*
 debug
 release
+*.o
+LeetCode
