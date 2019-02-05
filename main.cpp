@@ -7,6 +7,9 @@
 #include "src/two_string_multip.h"
 #include "src/reverse_string.h"
 #include "src/restore_ip_address.h"
+#include "src/three_sum.h"
+#include "src/max_area_island.h"
+#include "src/search_target_in_rotation_array.h"
 
 using namespace std;
 
@@ -61,13 +64,45 @@ int main(int argc, char *argv[])
 
 //  cout << s3 << endl;
 
-  string s1 = "111111111111111";
-  vector<string> r1 = restoreIpAddresses(s1);
+//  string s1 = "111111111111111";
+//  vector<string> r1 = restoreIpAddresses(s1);
 
-  for (int i = 0; i < r1.size(); ++i) {
-    cout << r1[i] << '\t';
-  }
-  cout << endl;
+//  for (int i = 0; i < r1.size(); ++i) {
+//    cout << r1[i] << '\t';
+//  }
+//  cout << endl;
+
+//  vector<int> k;
+//  k.push_back(-1);
+//  k.push_back(0);
+//  k.push_back(1);
+//  k.push_back(2);
+//  k.push_back(-1);
+//  k.push_back(-4);
+//  vector<vector<int> > r = threeSum(k);
+
+//  vector<int> row;
+//  row.push_back(0);
+//  row.push_back(1);
+//  vector<vector<int> >col;
+//  col.push_back(row);
+//  row.clear();
+//  row.push_back(1);
+//  row.push_back(1);
+//  col.push_back(row);
+
+//  int count = maxAreaOfIsland(col);
+
+  vector<int> k;
+  k.push_back(4);
+  k.push_back(5);
+  k.push_back(6);
+  k.push_back(7);
+  k.push_back(0);
+  k.push_back(1);
+  k.push_back(2);
+
+  int r = searchInRotationArray(k, 0);
 
   system("pause");
 

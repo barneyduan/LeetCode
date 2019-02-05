@@ -9,5 +9,8 @@ HEADERS += \
     $$PWD/src/two_string_multip.h \
     $$PWD/src/reverse_string.h \
     $$PWD/src/simply_unix_path.h \
-    $$PWD/src/restore_ip_address.h
+    $$PWD/src/restore_ip_address.h \
+    $$PWD/src/three_sum.h \
+    $$PWD/src/max_area_island.h \
+    $$PWD/src/search_target_in_rotation_array.h
 
