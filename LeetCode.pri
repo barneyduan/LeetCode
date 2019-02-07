@@ -12,5 +12,7 @@ HEADERS += \
     $$PWD/src/restore_ip_address.h \
     $$PWD/src/three_sum.h \
     $$PWD/src/max_area_island.h \
-    $$PWD/src/search_target_in_rotation_array.h
+    $$PWD/src/search_target_in_rotation_array.h \
+    $$PWD/src/find_friend_circle.h \
+    $$PWD/src/merge_the_internval.h
 
