@@ -10,6 +10,8 @@
 #include "src/three_sum.h"
 #include "src/max_area_island.h"
 #include "src/search_target_in_rotation_array.h"
+#include "src/trape_water.h"
+#include "src/list/list_handle.h"
 
 using namespace std;
 
@@ -93,18 +95,35 @@ int main(int argc, char *argv[])
 
 //  int count = maxAreaOfIsland(col);
 
-  vector<int> k;
-  k.push_back(4);
-  k.push_back(5);
-  k.push_back(6);
-  k.push_back(7);
-  k.push_back(0);
-  k.push_back(1);
-  k.push_back(2);
+//  vector<int> k;
+//  k.push_back(4);
+//  k.push_back(5);
+//  k.push_back(6);
+//  k.push_back(7);
+//  k.push_back(0);
+//  k.push_back(1);
+//  k.push_back(2);
 
-  int r = searchInRotationArray(k, 0);
+//  int r = searchInRotationArray(k, 0);
 
-  system("pause");
+//  vector<int> k;
+//  k.push_back(0);
+//  k.push_back(1);
+//  k.push_back(0);
+//  k.push_back(2);
+//  k.push_back(1);
+//  k.push_back(0);
+//  k.push_back(1);
+//  k.push_back(3);
+//  k.push_back(2);
+//  k.push_back(1);
+//  k.push_back(2);
+//  k.push_back(1);
+//  int r = trap(k);
+
+//  system("pause");
+
+  ListTestMain();
 
   return 0;
 }
