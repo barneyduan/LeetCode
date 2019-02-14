@@ -132,6 +132,47 @@ bool hasCycle(ListNode *head) {
   return true;
 }
 
+// 1->2->3
+// 2->4
+
+// 1->
+// 2->
+// 2->
+// 3->4
+// 2->3->4
+//
+ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+
+  if (!l1 && !l2) return NULL;
+  if (!l1) return l2;
+  if (!l2) return l1;
+
+  if (l1->val < l2->val) {
+    l1->next = mergeTwoLists(l1->next, l2);
+    return l1;
+  } else {
+    l2->next = mergeTwoLists(l1, l2->next);
+    return l2;
+  }
+
+}
+
+ListNode* mergeKLists(vector<ListNode*>& lists) {
+
+  int n = lists.size();
+  if (n == 0) {
+    return NULL;
+  }
+  while (n > 1) {
+    int k = (n+1)/2;
+    for (int i = 0; i < n/2; i++) {
+      lists[i] = mergeTwoLists(lists[i], lists[i+k]);
+    }
+    n = k;
+  }
+  return lists[0];
+}
+
 void ListTestMain() {
 
   int x[] = {2, 0, -4};
@@ -144,26 +185,26 @@ void ListTestMain() {
   }
   head->next = first->next;
 
-  ListNode *r = detectCycle(first);
+  //ListNode *r = detectCycle(first);
   //reversePrintList(first);
 
-  ListNode *head1 = new ListNode(2);
+  ListNode *head1 = new ListNode(1);
   ListNode *first1 = head1;
-  int x1[] = {4, 3};
+  int x1[] = {3, 4};
   for (int i = 0; i < 2; ++i) {
     head1->next = new ListNode(x1[i]);
     head1 = head1->next;
   }
 
-  ListNode *head2 = new ListNode(5);
+  ListNode *head2 = new ListNode(1);
   ListNode *first2 = head2;
-  int x2[] = {6, 4};
+  int x2[] = {2, 3};
   for (int i = 0; i < 2; ++ i) {
     head2->next = new ListNode(x2[i]);
     head2 = head2->next;
   }
 
-  ListNode *k = addTwoNumbers(first1, first2);
+  ListNode *k = mergeTwoLists(first1, first2);
 
 }
 

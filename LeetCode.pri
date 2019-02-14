@@ -16,5 +16,6 @@ HEADERS += \
     $$PWD/src/find_friend_circle.h \
     $$PWD/src/merge_the_internval.h \
     $$PWD/src/trape_water.h \
-    $$PWD/src/list/list_handle.h
+    $$PWD/src/list/list_handle.h \
+    $$PWD/src/dynamic_plan/max_stock_profit.h
 
