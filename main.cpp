@@ -12,6 +12,8 @@
 #include "src/search_target_in_rotation_array.h"
 #include "src/trape_water.h"
 #include "src/list/list_handle.h"
+#include "src/dynamic_plan/dynamic_plan.h"
+#include "src/dynamic_plan/package_problem.h"
 
 using namespace std;
 
@@ -124,6 +126,10 @@ int main(int argc, char *argv[])
 //  system("pause");
 
   ListTestMain();
+
+  //dynamic_test_main();
+
+  packageTestMain();
 
   return 0;
 }

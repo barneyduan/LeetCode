@@ -17,5 +17,7 @@ HEADERS += \
     $$PWD/src/merge_the_internval.h \
     $$PWD/src/trape_water.h \
     $$PWD/src/list/list_handle.h \
-    $$PWD/src/dynamic_plan/max_stock_profit.h
+    $$PWD/src/dynamic_plan/max_stock_profit.h \
+    $$PWD/src/dynamic_plan/dynamic_plan.h \
+    $$PWD/src/dynamic_plan/package_problem.h
 
