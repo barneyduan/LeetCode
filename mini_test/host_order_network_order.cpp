@@ -24,6 +24,10 @@ int main() {
   cout << r1 << endl;  // 342075584
   cout << r2 << endl;  // 3232260884
   cout << r3 << endl;  // 20.99.168.192
+
+  in_addr res;
+  inet_pton(AF_INET, l1.c_str(), &res);
+  cout << res.s_addr << endl;  // 342075584
 }
 
 /*
@@ -34,5 +38,13 @@ int main() {
  *
  * Ipv4:
  * ip string -> network order stream
- * inet_addr, inet_network, inet_aton
+ * inet_addr(): ipv4 string -> binary data in network byte order
+ * inet_network(): ipv4 string -> binary data in host byte order
+ * inet_ntoa(): in_addr in network byte order -> ipv4 string
+ * inet_aton(): ipv4 string -> sockaddr_in in network byte order
+ * inet_pton(): ipv4 string -> in_addr size binary data in network byte order
+ *              but inet_pton support ipv6 type, by inet_pton only accept
+ *              dotted-decimal ipv4 string.
+ *              whereas inet_aton and inet_addr allow the more general
+ *              numbers-and-dots notation(hex, octal...)
  */
