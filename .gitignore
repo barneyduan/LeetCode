@@ -5,3 +5,4 @@ release
 *.o
 LeetCode
 .test/
+.ccls-cache/
