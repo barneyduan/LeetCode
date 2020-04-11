@@ -7,3 +7,4 @@ LeetCode
 .test/
 .ccls-cache/
 test
+*.txt
